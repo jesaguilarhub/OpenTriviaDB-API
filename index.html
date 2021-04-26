@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="./images/Trivia.png" alt="Trivia-Logo" style="max-height: 150px;">
+  </header>
+  <div class="container mt-5">
+    <form id="trivia-filters-form">
+      <label for="category-select" class="form-label">Categoría:</label>
+      <select id="category-select" required>
+        <option selected>--Selecciona una categoría--</option>
+      </select>
+
+      <label for="amount" class="form-label">Cantidad:</label>
+      <input type="number" id="amount" min="1" max="50" value="10">
+
+      <label for="difficulty-select" class="form-label">Dificultad:</label>
+      <select id="difficulty-select" required>
+        <option selected>--Selecciona una dificultad--</option>
+        <option value="easy">Fácil</option>
+        <option value="medium">Media</option>
+        <option value="hard">Difícil</option>
+      </select>
+
+      <label for="type-select" class="form-label">Tipo:</label>
+      <select id="type-select" required>
+        <option selected>--Selecciona un tipo--</option>
+        <option value="multiple">Opción Multiple</option>
+        <option value="boolean">Verdadero/Falso</option>
+      </select>
+      <button type="submit"><i class="fas fa-play"></i></button>
+    </form>
+
+    <div class="trivia-container d-none" id="trivia-container">
+      <!-- Question -->
+      <div id="trivia-question">
+
+      </div>
+
+      <!-- Form -->
+      <form action="" id="trivia-form">
+        <!-- Answers -->
+        <fieldset id="answers-container">
+
+        </fieldset>
+
+        <!-- Button -->
+        <div class="button-container">
+          <button type="submit" class="next-button" id="next" title="Next Question (;">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Script -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
